@@ -2,7 +2,7 @@ import react from "react";
 
 
 export default function Cancion (props) {
-    console.log(props); 
+    console.log(props);     
 
     
 
@@ -21,10 +21,7 @@ export default function Cancion (props) {
         </tbody>
         </table>
       </div>
-    )
-}
-
-export function Cancion2 (props) {
+    )cd{
     console.log(props); 
 
     
