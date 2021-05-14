@@ -13,10 +13,11 @@ export default function Nota (props) {
         <tr><td>Identidad</td><td>{props.identidad}</td></tr>
         <tr><td>Nombre</td> <td>{props.nombre}</td></tr>
         <tr><td>Nacimiento</td> <td>{props.nacimiento}</td></tr>
-        <tr><td>Nota</td><td>{props.nota}</td></tr>
+        <tr><td>Nota</td><td>{props.promedio}</td></tr>
             
         </tbody>
         </table>
       </div>
-    )
+    )   
 }
+
