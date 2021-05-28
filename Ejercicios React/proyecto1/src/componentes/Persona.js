@@ -1,37 +1,39 @@
-//Seccion de importacion de componentes
-
+//seccion de importancion de componentes
 import React from "react";
 
+export default function Persona(props){
+    
+    //Asignacion por destructuring
+    const {personaInfo, fnsaludar} = props;
+    const {nombre = "No disponible", apellido = "No disponible"} = personaInfo;  //props por defecto
+    
+    console.log(nombre); 
 
- export default function Persona(props) {
-
-    console.log(props); 
-
-    return (
-      <div> 
-        <h2> Datos Personales</h2>
-        <table>
-        <tbody>
-        <tr><td>Nombre:</td><td> {props.personaInfo.nombre}</td></tr>
-            <tr><td>Apellidos:</td><td>{props.personaInfo.apellido}</td></tr>
-            <tr><td>Edad:</td><td> {props.personaInfo.edad}</td></tr>
-            <tr><td>Nacionalidad:</td><td>{props.personaInfo.nacionalidad}</td></tr>
-            <tr><td>Genero:</td><td>{props.personaInfo.genero}</td></tr>
-            <tr><td>
-                <button onClick={ () => props.fnsaludar(props.personaInfo.nombre) } >Saludar</button></td></tr>
-        </tbody>
-        </table>
-      </div>
+    return(
+        <div>
+            <h2>Datos Personales</h2>
+            <table>
+                <tbody>
+                    <tr> <td>Nombre:    </td>   <td> {nombre} </td>      </tr>
+                    <tr> <td>Apellidos: </td>   <td> {apellido}</td>  </tr>
+                    <tr> <td>edad:      </td>   <td> {personaInfo.edad}</td>  </tr>
+                    <tr> <td>nacionalidad:</td> <td> {personaInfo.nacionalidad}</td>  </tr>
+                    <tr> <td>genero:      </td> <td> {personaInfo.genero}</td>  </tr>
+                    <tr> <td>
+                            <button onClick={ () => fnsaludar(personaInfo.nombre) } >Saludar</button>
+                    </td> </tr>
+                </tbody>
+            </table>
+        </div>
     )
 }
-/*
- export function Intereses() {
 
-    return (
-        <div> 
-          <h2> Estos son intereses</h2>
-            </div>
-      )
+export function Intereses(){
 
+    return(
+        <div>
+            <h2>Estos son intereses</h2>
+        </div>
+    )
 }
-*/
+ 
