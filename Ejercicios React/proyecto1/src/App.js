@@ -32,8 +32,8 @@ function App() {
   //const v_nombre = "Juan Jose";
   //const v_apellido = "Lopez Perez"
   const o_persona = {
-      nombre: "Jose Perez",
-      apellido: "Lopez Perez",
+      nombre: "Kevin Joel",
+      apellido: "Martinez",
       edad: 20,
       nacionalidad : "Hondurena",
       genero : "M"
