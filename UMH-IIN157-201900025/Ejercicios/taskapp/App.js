@@ -15,8 +15,7 @@ import Tarea from "./src/componentes/Tarea.js";
 export default function App(){
 
 const [listaTareas, setTareas] = useState([
-  {id:1, titulo : "Kevin Joel Martinez", descripcion :"201900025"},
-{id:1, titulo : "Tarea 1", descripcion :"Descripcion Tarea 1"},
+ {id:1, titulo : "Tarea 1", descripcion :"Descripcion Tarea 1"},
 {id:2, titulo : "Tarea 2", descripcion :"Descripcion Tarea 2"},
 {id:3, titulo : "Tarea 3", descripcion :"Descripcion Tarea 3"},
 ]);
