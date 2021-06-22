@@ -1,0 +1,104 @@
+importar  React ,  {  useEffect ,  useState  }  de  'reaccionar' ;
+importar  {
+  SafeAreaView ,
+  ScrollView ,
+  StatusBar ,
+  StyleSheet ,
+  texto ,
+  useColorScheme ,
+  Ver ,  botón
+}  de  'react-native' ;
+
+
+importar  Tarea  desde  "./src/componentes/Tarea.js" ;
+
+exportar  aplicación de función predeterminada  ( ) { 
+
+const  [ listaTareas ,  setTareas ]  =  useState ( [
+ { id : 1 ,  titulo : "Tarea 1" ,  descripcion : "Descripcion Tarea 1" } ,
+{ id : 2 ,  titulo : "Tarea 2" ,  descripcion : "Descripcion Tarea 2" } ,
+{ id : 3 ,  titulo : "Tarea 3" ,  descripcion : "Descripcion Tarea 3" } ,
+] ) ;
+
+const  [ nuevaTarea , addTarea  ]  =  useState ( falso ) ;
+useEffect (  ( ) => {
+if ( nuevaTarea  ===  true ) {
+  listaTareas . push ( { id : 4 ,  titulo : "Tarea X + 1" ,  descripcion : "Esta es una tarea agregada" } ) ;
+
+}
+addTarea ( falso ) ;
+
+} ,
+[ nuevaTarea ] )
+
+const  agragarTarea  = ( )  => {
+  addTarea ( verdadero ) ;
+}
+
+  retorno (
+    < SafeAreaView >
+      < Estilo de botón  = { estilos . btn } title = "Nueva Tarea" color = "#FF 5733" onPress = { agragarTarea } > < / Button >   
+      < ScrollView >
+
+      {
+       listaTareas . mapa ( ( elemento , índice ) =>  (
+       < Tarea  data = { item } / >
+
+  ) )
+
+/ *
+<Tarea
+        titulo = "Tarea 1"
+        descripcion = "Descaripcion Tarea 1"
+        />
+      <Tarea
+        titulo = "Tarea 2"
+        descripcion = "Descaripcion Tarea 2"
+        />
+        <Tarea
+        />
+<Tarea
+        />
+        <Tarea
+        />
+        <Tarea
+        />
+        * /
+
+      }
+
+
+      < / ScrollView >
+    < / SafeAreaView >
+  ) ;
+}
+
+ estilos  const =  StyleSheet . crear ( {
+  sectionContainer : {
+    marginTop : 32 ,
+    acolchado Horizontal : 24 ,
+  } ,
+  sectionTitle : {
+    fontSize : 24 ,
+    fontWeight : '600' ,
+  } ,
+  sectionDescription : {
+    marginTop : 8 ,
+    fontSize : 18 ,
+    fontWeight : '400' ,
+  } ,
+  destacar : {
+    fontWeight : '700' ,
+  } ,
+  titulo : {
+    fontSize : 100 ,
+    fontWeight : '600' ,
+
+  } ,
+  btn : {
+marginTop : 8 ,
+marginLeft : 8 ,
+marginRight : 8
+
+  }
+} ) ;
